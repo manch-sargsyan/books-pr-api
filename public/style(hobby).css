@@ -1,0 +1,40 @@
+div{
+  background-color:rgb(194, 192, 192);
+  border-radius: 20px;
+  border: 3px solid rgb(233, 14, 32);
+  padding:30px;
+  font-family: "Sofia", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: inherit;
+  color: white;
+  font-size: large; 
+}
+/*----------------------------------admin----------------------------------=--*/
+div.item {
+  
+	min-width: 200px;
+	width: 20%;
+	height: 500px;
+	background-color: black;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+}
+
+div.item button {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+
+
+span.item {
+	line-height: 16px;
+	font-size: 14px;
+}
+
+span.item b {

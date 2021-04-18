@@ -1,0 +1,13 @@
+div{
+  background-color:rgb(226, 179, 109);
+  border-radius: 20px;
+  border: 3px solid rgb(228, 105, 34);
+  padding:30px;
+  font-family: "Sofia", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: inherit;
+  color: rgb(206, 87, 32);
+  font-size: large; 
+}

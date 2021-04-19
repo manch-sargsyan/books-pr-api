@@ -83,15 +83,15 @@
     <sup>*</sup>
     <label for="origLanguage">Original Language</label><br>
 <form>
-  <input type="radio" id="English" name="language" value="English">
+  <input type="radio" id="English" name="orig_language" value="English">
   <label for="English">English</label><br>
-  <input type="radio" id="Russian" name="language" value="Russian">
+  <input type="radio" id="Russian" name="orig_language" value="Russian">
   <label for="Russian">Russian</label><br>
-  <input type="radio" id="French" name="language" value="French">
+  <input type="radio" id="French" name="orig_language" value="French">
   <label for="French">French</label><br>
-  <input type="radio" id="Armenian" name="language" value="Armenian">
+  <input type="radio" id="Armenian" name="orig_language" value="Armenian">
   <label for="Armenian">Armenian</label><br>
-  <input type="radio" id="other" name="language" value="other">
+  <input type="radio" id="other" name="orig_language" value="other">
   <label for="other">Other</label>
 </form> 
 </div> <br>
@@ -113,12 +113,12 @@
 <div>
     <sup>*</sup>
   <label for="Publishing Date">Publishing Date:</label>
-  <input type="date" id="Publishing Date" name="Publishing Date">
+  <input type="date" id="publishing_date" name="Publishing Date">
 </div> <br>
 <div>
     <sup>*</sup>
   <label for="Original Publishing Date">Original Publishing Date:</label>
-  <input type="date" id="Original Publishing Date" name="Original Publishing Date">
+  <input type="date" id="original_publishing_date" name="Original Publishing Date">
 </div> <br>
 <div>
     <sup>*</sup>
@@ -132,7 +132,7 @@
   </div> <br>
 <div>
     <sup>*</sup>
-  <button id="button" onclick="showTheBookData">Submit</button>
+  <button id="button" onclick="showTheBookData(event)">Submit</button>
 </form>
     <script src="script.js"></script>
   </body>

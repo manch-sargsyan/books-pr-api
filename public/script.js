@@ -71,15 +71,16 @@ function handleCurrencyChange() {
   myBook.currency = document.getElementById("currency").value;
 }
 
-function handleLanguageChange(e) {
-  myBook.language = e.target.value;
+function handleLanguageChange() {
+
   if(myBook.language!="otherlang"){
     myBook.otherLanguageValue = "";
-    document.getElementById("otherLanguageValue").style.display = "none";
+    document.getElementsByName("language")[0].style.display = "none";
   }
   else{
-    document.getElementById("otherLanguageValue").style.display = "block";
+    document.getElementsByName("language")[0].style.display = "block";
   }
+  myBook.otherLanguageValue = document.getElementsByName("language")[0].value;
 }
 
 function handleOtherLanguageChange(){
@@ -90,15 +91,15 @@ function handleOtherLanguageChange(){
   }
 }
 
-function handleOrigLanguageChange(e) {
-  myBook.origLanguage = e.target.value;
-  if(myBook.origLanguage!="otheroriglang"){
-    myBook.otherOrigLangauageValue = "";
-    document.getElementById("otherOrigLanguageValue").style.display = "none";
+function handleOrigLanguageChange() {
+if(myBook.language!="otherlang"){
+    myBook.otherLanguageValue = "";
+    document.getElementsByName("orig_language")[0].style.display = "none";
   }
   else{
-    document.getElementById("otherOrigLanguageValue").style.display = "block";
+    document.getElementsByName("orig_language")[0].style.display = "block";
   }
+  myBook.otherLanguageValue = document.getElementsByName("orig_language")[0].value
 }
 
 function handleOtherOrigLanguageChange(){
@@ -122,11 +123,11 @@ function handlePublisherChange() {
 }
 
 function handlePublishingDateChange() {
-  myBook.publishingdate = document.getElementById("date").value;
+  myBook.publishingdate = document.getElementById("publishing_date").value;
 }
 
 function handleOrigPublishingDateChange() {
-  myBook.origpublishingdate = document.getElementById("origdate").value;
+  myBook.origpublishingdate = document.getElementById("original_publishing_date").value;
 }
 
 function handleGenreChange() {
@@ -134,7 +135,7 @@ function handleGenreChange() {
 }
 
 function handleAgeRegistrationChange() {
-  myBook.age = document.getElementById("age").value;
+  myBook.age = document.getElementById("ageregistration").value;
 }
 function showTheBookData(e){
 handleFullnameChange()
@@ -161,7 +162,7 @@ handleAgeRegistrationChange()
 
   $.ajax({
     type: 'POST',
-    url: "https://cse120-2021-api.herokuapp.com/data",
+    url: "https://manch-pr.herokuapp.com/data",
     data: myBook,
     cache: false,
     dataType : 'json',
@@ -179,7 +180,7 @@ handleAgeRegistrationChange()
 function loadExistingData() {
     $.ajax({
    type : "GET",
-    url : "https://cse120-2021-api.herokuapp.com/data",
+    url : "https://manch-pr.herokuapp.com/data",
     dataType : "json",
     success : function(data) {
     console.log("success", data);
@@ -251,7 +252,7 @@ function deleteData(id) {
 
     $.ajax({
         type: 'POST',
-        url: "https://cse120-2021-api.herokuapp.com/data/delete",
+        url: "https://manch-pr.herokuapp.com/data/delete",
         data: tmp,
         cache: false,
         dataType : 'json',
@@ -324,3 +325,4 @@ function displayData(existingData) {
   }
   document.getElementById("existingData").innerHTML += "</ul>"
 }
+

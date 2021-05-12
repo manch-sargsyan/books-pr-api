@@ -267,7 +267,7 @@ function deleteData(id) {
             console.log("Complete");  
         }
         })
-          displayData(myHobbyData, "tennisDataContainer");
+          displayData(myHobbyData, "HobbyDataContainer");
           displayData(myBookData, "bookDataContainer");
          /* displayData(otherData, "otherDataContainer");*/
         }

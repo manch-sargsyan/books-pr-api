@@ -266,6 +266,14 @@ function deleteData(id) {
         complete: function () {
             console.log("Complete");  
         }
+        })
+          displayData(myHobbyData, "tennisDataContainer");
+          displayData(myBookData, "bookDataContainer");
+         /* displayData(otherData, "otherDataContainer");*/
+        },
+        error : function(data) {
+            console.log("Error")
+        }
     });
 }
 function loadEditItem() {
@@ -318,7 +326,14 @@ function displayData(existingData) {
       li.innerHTML = Object.values(itemData)[k]
       ul.appendChild(li)
     }
-    
+    document.querySelectorAll("#HobbyDataContainer div.item").forEach(div => {
+      div.addEventListener("click", function(e){
+        if (this.style.height == "30px") {
+          this.style.height = "auto";
+        } else {
+          this.style.height = "30px";
+        }
+      })  
 
     
    exData += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b> </li>" + currentBook.author + "</li>";

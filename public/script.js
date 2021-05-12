@@ -270,12 +270,11 @@ function deleteData(id) {
           displayData(myHobbyData, "tennisDataContainer");
           displayData(myBookData, "bookDataContainer");
          /* displayData(otherData, "otherDataContainer");*/
-        },
+        }
         error : function(data) {
             console.log("Error")
         }
-    });
-}
+    ;
 function loadEditItem() {
   localStorage = window.localStorage;
   editItem = JSON.parse(localStorage.getItem("editItem"));

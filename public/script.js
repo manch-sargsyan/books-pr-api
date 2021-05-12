@@ -249,6 +249,28 @@ function deleteData(id) {
     var tmp = {
         "id": id
     }
+function loadExistingData() {
+    myHobbyData = [];
+    myBookData = [];
+    otherData = [];
+    $.ajax({
+        type : "GET",
+        url : "https://manch-pr.herokuapp.com/data",
+        dataType : "json",
+        success : function(data) {
+          console.log("success", data);
+          loadedData = data.data;
+          data.data.forEach(elem =>{
+            if(elem["owner"] == "Mariam Sargsyan"){
+              if(elem["project"] == "Hobby"){
+                myHobbyData.push(elem);
+              } else {
+                myBookData.push(elem);
+              }
+            }else{
+              otherData.push(elem);
+            }
+          })
 
     $.ajax({
         type: 'POST',
